@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/FairShare.UI/appsettings.json
+/FairShare.API/appsettings.json
