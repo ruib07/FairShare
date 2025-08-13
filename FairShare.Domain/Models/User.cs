@@ -8,6 +8,7 @@ public class User
     public string PasswordHash { get; set; }
     public byte[] ProfilePicture { get; set; }
     public DateTime CreatedAt { get; set; }
+    public ICollection<RefreshToken> RefreshTokens { get; set; }
     public ICollection<Group> Groups { get; set; }
     public ICollection<GroupMember> GroupMembers { get; set; }
     public ICollection<Expense> Expenses { get; set; }

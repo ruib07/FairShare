@@ -1,24 +1,39 @@
-﻿using Microsoft.AspNetCore.DataProtection;
+﻿using Microsoft.AspNetCore.Cryptography.KeyDerivation;
+using System.Security.Cryptography;
 
 namespace FairShare.Application.Helpers;
 
-public class EncryptionHelper
+public static class EncryptionHelper
 {
-    private static readonly IDataProtector _protector;
-
-    static EncryptionHelper()
+    public static string HashPassword(string password)
     {
-        var provider = DataProtectionProvider.Create("MyApp");
-        _protector = provider.CreateProtector("PasswordProtector");
+        byte[] salt = new byte[16];
+        using var rng = RandomNumberGenerator.Create();
+        rng.GetBytes(salt);
+
+        byte[] hash = KeyDerivation.Pbkdf2(
+            password: password,
+            salt: salt,
+            prf: KeyDerivationPrf.HMACSHA256,
+            iterationCount: 10000,
+            numBytesRequested: 32
+        );
+
+        byte[] hashBytes = new byte[16 + 32];
+        Array.Copy(salt, 0, hashBytes, 0, 16);
+        Array.Copy(hash, 0, hashBytes, 16, 32);
+
+        return Convert.ToBase64String(hashBytes);
     }
 
-    public static string Encrypt(string plainText)
+    public static bool VerifyPassword(string providedPassword, string storedHash)
     {
-        return _protector.Protect(plainText);
-    }
+        byte[] hashBytes = Convert.FromBase64String(storedHash);
+        byte[] salt = hashBytes[..16];
 
-    public static string Decrypt(string encryptedText)
-    {
-        return _protector.Unprotect(encryptedText);
+        using var pbkdf2 = new Rfc2898DeriveBytes(providedPassword, salt, 10000, HashAlgorithmName.SHA256);
+        byte[] hash = pbkdf2.GetBytes(32);
+
+        return hash.SequenceEqual(hashBytes[16..]);
     }
 }

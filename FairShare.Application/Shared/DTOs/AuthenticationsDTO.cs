@@ -9,8 +9,10 @@ public static class AuthenticationsDTO
         public record Response(string AccessToken, string RefreshToken, string TokenType, DateTime ExpiresAt);
     }
 
+#nullable enable
     public static class SignUp
     {
-        public record Request(string Name, string Email, string Password, byte ProfilePicture);
+        public record Request(string Name, string Email, string Password, byte[]? ProfilePicture);
     }
+#nullable disable
 }

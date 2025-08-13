@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FairShare.Application\FairShare.Application.csproj" />
     <ProjectReference Include="..\FairShare.Domain\FairShare.Domain.csproj" />
   </ItemGroup>
 
