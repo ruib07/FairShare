@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36401.2 d17.14
+VisualStudioVersion = 17.14.36401.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FairShare.API", "FairShare.API\FairShare.API.csproj", "{41BA6B85-B34E-4A2F-AAB9-0A528863780E}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FairShare.UI.Services", "FairShare.UI.Services\FairShare.UI.Services.csproj", "{22A64E7E-2F1C-49DC-A9D9-E536C8E55118}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FairShare.UI", "FairShare.UI\FairShare.UI.csproj", "{5F6EDE5E-0760-439E-ABEA-34CB109D1C82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FairShare.Worker", "FairShare.Worker\FairShare.Worker.csproj", "{1BFE945F-03E2-49E1-83C0-38CEDE95596B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{5F6EDE5E-0760-439E-ABEA-34CB109D1C82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F6EDE5E-0760-439E-ABEA-34CB109D1C82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F6EDE5E-0760-439E-ABEA-34CB109D1C82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BFE945F-03E2-49E1-83C0-38CEDE95596B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BFE945F-03E2-49E1-83C0-38CEDE95596B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BFE945F-03E2-49E1-83C0-38CEDE95596B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BFE945F-03E2-49E1-83C0-38CEDE95596B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
