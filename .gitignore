@@ -363,3 +363,7 @@ MigrationBackup/
 FodyWeavers.xsd
 /FairShare.UI/appsettings.json
 /FairShare.API/appsettings.json
+/FairShare.Worker/appsettings.json
+/FairShare.API/appsettings.Development.json
+/FairShare.Worker/appsettings.Development.json
+/FairShare.UI/appsettings.Development.json
