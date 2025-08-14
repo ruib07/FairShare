@@ -13,11 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FairShare.Domain", "FairSha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FairShare.Tests", "FairShare.Tests\FairShare.Tests.csproj", "{4E721141-3C83-48FA-A529-44CB08BF6540}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FairShare.UI.Services", "FairShare.UI.Services\FairShare.UI.Services.csproj", "{22A64E7E-2F1C-49DC-A9D9-E536C8E55118}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FairShare.UI", "FairShare.UI\FairShare.UI.csproj", "{5F6EDE5E-0760-439E-ABEA-34CB109D1C82}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FairShare.Worker", "FairShare.Worker\FairShare.Worker.csproj", "{1BFE945F-03E2-49E1-83C0-38CEDE95596B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FairShare.APIClient", "FairShare.APIClient\FairShare.APIClient.csproj", "{E5BD5452-8DD9-40D4-A177-B9E4B458D04E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FairShare", "FairShare\FairShare.csproj", "{0DAE65AD-941A-482A-B549-871D5FCD689A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,18 +45,18 @@ Global
 		{4E721141-3C83-48FA-A529-44CB08BF6540}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E721141-3C83-48FA-A529-44CB08BF6540}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E721141-3C83-48FA-A529-44CB08BF6540}.Release|Any CPU.Build.0 = Release|Any CPU
-		{22A64E7E-2F1C-49DC-A9D9-E536C8E55118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{22A64E7E-2F1C-49DC-A9D9-E536C8E55118}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{22A64E7E-2F1C-49DC-A9D9-E536C8E55118}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{22A64E7E-2F1C-49DC-A9D9-E536C8E55118}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5F6EDE5E-0760-439E-ABEA-34CB109D1C82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5F6EDE5E-0760-439E-ABEA-34CB109D1C82}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5F6EDE5E-0760-439E-ABEA-34CB109D1C82}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5F6EDE5E-0760-439E-ABEA-34CB109D1C82}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1BFE945F-03E2-49E1-83C0-38CEDE95596B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1BFE945F-03E2-49E1-83C0-38CEDE95596B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BFE945F-03E2-49E1-83C0-38CEDE95596B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BFE945F-03E2-49E1-83C0-38CEDE95596B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5BD5452-8DD9-40D4-A177-B9E4B458D04E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5BD5452-8DD9-40D4-A177-B9E4B458D04E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5BD5452-8DD9-40D4-A177-B9E4B458D04E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5BD5452-8DD9-40D4-A177-B9E4B458D04E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DAE65AD-941A-482A-B549-871D5FCD689A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DAE65AD-941A-482A-B549-871D5FCD689A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DAE65AD-941A-482A-B549-871D5FCD689A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DAE65AD-941A-482A-B549-871D5FCD689A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

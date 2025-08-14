@@ -36,8 +36,8 @@ public class ExpensesController : ControllerBase
         return Ok(await _expensesService.GetExpensesByGroupId(groupId));
     }
 
-    // GET api/v1/expenses/by-user/{userId}
-    [HttpGet("by-user/{userId}")]
+    // GET api/v1/expenses/paid/{userId}
+    [HttpGet("paid/{userId}")]
     public async Task<ActionResult<IEnumerable<Expense>>> GetPaidExpensesByUserId(Guid userId)
     {
         return Ok(await _expensesService.GetPaidExpensesByUserId(userId));

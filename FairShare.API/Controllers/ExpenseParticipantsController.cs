@@ -25,8 +25,8 @@ public class ExpenseParticipantsController : ControllerBase
         return Ok(await _expenseParticipantsService.GetParticipantsByExpenseId(expenseId));
     }
 
-    // GET api/v1/expense-participants/{expenseId}/users/{userId}
-    [HttpGet("{expenseId}/users/{userId}")]
+    // GET api/v1/expense-participants/{expenseId}/is-participating/{userId}
+    [HttpGet("{expenseId}/is-participating/{userId}")]
     public async Task<IActionResult> IsUserParticipating(Guid expenseId, Guid userId)
     {
         return Ok(await _expenseParticipantsService.IsUserParticipating(expenseId, userId));
@@ -41,8 +41,8 @@ public class ExpenseParticipantsController : ControllerBase
         return CreatedAtAction(nameof(GetParticipantsByExpenseId), new { expenseId = expenseParticipant.ExpenseId }, expenseParticipant);
     }
 
-    // DELETE api/v1/expense-participants/{expenseId}/users/{userId}
-    [HttpDelete("{expenseId}/users/{userId}")]
+    // DELETE api/v1/expense-participants/{expenseId}/{userId}
+    [HttpDelete("{expenseId}/{userId}")]
     public async Task<IActionResult> RemoveParticipant(Guid expenseId, Guid userId)
     {
         await _expenseParticipantsService.RemoveParticipant(expenseId, userId);

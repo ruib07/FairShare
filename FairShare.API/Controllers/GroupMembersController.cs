@@ -32,8 +32,8 @@ public class GroupMembersController : ControllerBase
         return Ok(await _groupMembersService.GetUsersInGroup(groupId));
     }
 
-    // GET api/v1/group-members/{groupId}/users/{userId}
-    [HttpGet("{groupId}/users/{userId}")]
+    // GET api/v1/group-members/{groupId}/is-in-group/{userId}
+    [HttpGet("{groupId}/is-in-group/{userId}")]
     public async Task<IActionResult> IsUserInGroup(Guid groupId, Guid userId)
     {
         return Ok(await _groupMembersService.IsUserInGroup(groupId, userId));

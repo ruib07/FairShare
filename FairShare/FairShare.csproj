@@ -10,4 +10,9 @@
     <PackageReference Include="MudBlazor" Version="8.11.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FairShare.APIClient\FairShare.APIClient.csproj" />
+    <ProjectReference Include="..\FairShare.Domain\FairShare.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

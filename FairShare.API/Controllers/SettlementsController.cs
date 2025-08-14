@@ -29,22 +29,22 @@ public class SettlementsController : ControllerBase
         return Ok(result.Data);
     }
 
-    // GET api/v1/settlements/by-group/{groupId}
-    [HttpGet("by-group/{groupId}")]
+    // GET api/v1/settlements/group/{groupId}
+    [HttpGet("group/{groupId}")]
     public async Task<ActionResult<IEnumerable<Settlement>>> GetSettlementsByGroupId(Guid groupId)
     {
         return Ok(await _settlementsService.GetSettlementsByGroupId(groupId));
     }
 
-    // GET api/v1/settlements/from-user/{userId}
-    [HttpGet("from-user/{userId}")]
+    // GET api/v1/settlements/from/{userId}
+    [HttpGet("from/{userId}")]
     public async Task<ActionResult<IEnumerable<Settlement>>> GetSettlementsFromUserId(Guid userId)
     {
         return Ok(await _settlementsService.GetSettlementsFromUserId(userId));
     }
 
-    // GET api/v1/settlements/to-user/{userId}
-    [HttpGet("to-user/{userId}")]
+    // GET api/v1/settlements/to/{userId}
+    [HttpGet("to/{userId}")]
     public async Task<ActionResult<IEnumerable<Settlement>>> GetSettlementsToUserId(Guid userId)
     {
         return Ok(await _settlementsService.GetSettlementsToUserId(userId));

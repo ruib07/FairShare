@@ -29,8 +29,8 @@ public class GroupsController : ControllerBase
         return Ok(result.Data);
     }
 
-    // GET api/v1/groups/created-by-user/{userId}
-    [HttpGet("created-by-user/{userId}")]
+    // GET api/v1/groups/created-by/{userId}
+    [HttpGet("created-by/{userId}")]
     public async Task<ActionResult<IEnumerable<Group>>> GetGroupsCreatedByUserId(Guid userId)
     {
         return Ok(await _groupsService.GetGroupsCreatedByUserId(userId));

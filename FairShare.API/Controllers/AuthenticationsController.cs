@@ -30,7 +30,7 @@ public class AuthenticationsController : ControllerBase
         _jwtDTO = jwtDTO;
     }
 
-    // POST api/v1/auth/signup
+    // POST api/v1/authentications/signup
     [AllowAnonymous]
     [HttpPost("signup")]
     public async Task<IActionResult> SignUp([FromBody, Required] AuthenticationsDTO.SignUp.Request request)
@@ -60,7 +60,7 @@ public class AuthenticationsController : ControllerBase
         return CreatedAtAction(nameof(SignUp), new { userId = createdUser.Data.Id }, response);
     }
 
-    // POST api/v1/auth/signin
+    // POST api/v1/authentications/signin
     [AllowAnonymous]
     [HttpPost("signin")]
     public async Task<IActionResult> SignIn([FromBody] AuthenticationsDTO.SignIn.Request signinRequest)
@@ -100,7 +100,7 @@ public class AuthenticationsController : ControllerBase
         return Ok(new AuthenticationsDTO.SignIn.Response(Token, refreshToken.Token, AppSettings.TokenType, ExpiresAt));
     }
 
-    // POST api/v1/auth/refresh
+    // POST api/v1/authentications/refresh
     [AllowAnonymous]
     [HttpPost("refresh")]
     public async Task<IActionResult> Refresh([FromBody] AuthenticationsDTO.SignIn.RefreshTokenRequest request)
@@ -135,7 +135,7 @@ public class AuthenticationsController : ControllerBase
         return Ok(new AuthenticationsDTO.SignIn.Response(Token, newRefreshToken.Token, AppSettings.TokenType, ExpiresAt));
     }
 
-    // POST api/v1/auth/logout
+    // POST api/v1/authentications/logout
     [Authorize]
     [HttpPost("logout")]
     public async Task<IActionResult> Logout([FromBody] AuthenticationsDTO.SignIn.RefreshTokenRequest request)
